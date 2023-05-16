@@ -10,11 +10,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.andoridbaseprojectwithxmlandsidedrawer"
+    namespace = "com.example.banaoTaskGalleryApp"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.example.andoridbaseprojectwithxmlandsidedrawer"
+        applicationId = "com.example.banaoTaskGalleryApp"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
@@ -59,7 +59,6 @@ dependencies {
     implementation ("androidx.appcompat:appcompat:1.6.1")
     implementation ("com.google.android.material:material:1.8.0")
     implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.security:security-crypto-ktx:1.1.0-alpha04")
     testImplementation ("junit:junit:4.13.2")
     androidTestImplementation ("androidx.test.ext:junit:1.1.5")
     androidTestImplementation ("androidx.test.espresso:espresso-core:3.5.1")
@@ -99,17 +98,11 @@ dependencies {
     kapt ("com.google.dagger:hilt-android-compiler:2.45")
     kapt ("androidx.hilt:hilt-compiler:1.0.0")
 
-    //DataStore
-    implementation ("androidx.datastore:datastore-preferences:1.0.0")
+    implementation ("androidx.paging:paging-runtime-ktx:3.2.0-alpha05")
 
-    //Room Database
-    val room_version = "2.5.0"
-    implementation ("androidx.room:room-runtime:$room_version")
-    annotationProcessor ("androidx.room:room-compiler:$room_version")
-    kapt ("androidx.room:room-compiler:$room_version")
-    implementation ("androidx.room:room-ktx:$room_version")
+    //Glide
+    implementation ("com.github.bumptech.glide:glide:4.14.2")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.14.2")
 
-    // Easy Permission for permission handling - (OPTIONAL)
-    implementation ("pub.devrel:easypermissions:3.0.0")
 
 }
